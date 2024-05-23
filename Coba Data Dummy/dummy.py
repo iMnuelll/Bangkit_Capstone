@@ -1,62 +1,46 @@
 from faker import Faker
 import random
-from datetime import datetime, timedelta
-import csv
+import pandas as pd
 
 fake = Faker()
 
 def generate_user_data():
     return {
-        "Identitas Pengguna": fake.name(),
-        "Mood user": random.choice(["Senang", "Sedih", "Stres", "Bahagia", "Cemas"]),
-        "Durasi Tidur": random.randint(4, 10),  # Jam tidur per malam
-        "Kondisi Fisik": random.choice(["Sehat", "Sakit"]),
+        "name": fake.name(),
+        "gender": random.randint(0, 1),
+        "age" : random.randint(20, 39),
+        "job" : random.randint(0, 4),
+        "task" : random.randint(0, 6),
+        "work_days" : random.randint(1, 7),
+        "difficulty" : random.randint(1, 5),
+        "average_work_hour" : round(random.uniform(1.0, 12.5), 1),
+        "average_rest" : round(random.uniform(1.0, 4.0), 1),
+        "mood_before_work" : random.randint(0, 2),
+        "mood_after_work" : random.randint(0, 2),
+        "deadline" : random.randint(0, 4),
+        "importance" : random.randint(1, 5),
+        "sleep_average" : round(random.uniform(1.0, 8.5), 1),
+        "productive_time" : random.randint(0, 4),
+        "urgency" : random.randint(1, 5),
+        "Gangguan dari atasan" : random.randint(0 ,1),    
+        "Gangguan dari internal " : random.randint(0 ,1),
+        "Gangguan dari kesehatan" : random.randint(0 ,1),
+        "Gangguan dari lingkungan sekitar " : random.randint(0 ,1),
+        "Gangguan dari perangkat elektronik " : random.randint(0 ,1),
+        "Gangguan dari teman atau rekan kerja" : random.randint(0 ,1),
+        "Gangguan internet" : random.randint(0 ,1),
+        "Gangguan jawa" : random.randint(0 ,1),
+        "MATI LAMPU 😡" : random.randint(0 ,1),
+        "Mood " : random.randint(0 ,1),
+        "Panggilan Telepon" : random.randint(0 ,1),
+        "Tidak ada" : random.randint(0 ,1),
+        "ajakan bermain" : random.randint(0 ,1)
     }
 
-def generate_task_data():
-    start_time = fake.date_time_between(start_date="-30d", end_date="now")
-    end_time = start_time + timedelta(hours=random.randint(1, 8))
-    return {
-        "Jam Mulai": start_time.strftime("%Y-%m-%d %H:%M:%S"),
-        "Jam Selesai" : end_time.strftime("%Y-%m-%d %H:%M:%S"),
-        "Durasi Kerja": (end_time - start_time).total_seconds() / 3600,  # Durasi kerja dalam jam
-        "Durasi Istirahat": random.randint(0, 2),  # Durasi istirahat dalam jam
-        "Jenis Tugas": random.choice(["Kreatif", "Analitis", "Fisik", "Administratif"]),
-        "Tingkat Kesulitan Tugas": random.randint(1, 10),
-        "Interruptions": random.randint(0, 5),
-        "Deadline": (start_time + timedelta(days=random.randint(1, 14))).strftime("%Y-%m-%d"),
-        "Urgency": random.randint(1, 5),
-        "Importance": random.randint(1, 5)
-    }
+data = [generate_user_data() for _ in range(100)]
 
-# Generate data
-num_users = 140 #Jumlah User
-user_data = [generate_user_data() for _ in range(num_users)]
+# Mengonversi data menjadi DataFrame
+df = pd.DataFrame(data)
 
-tasks_per_user = 1 # Jumlah task / tugas user
-task_data = []
-for user in user_data:
-    for i in range(tasks_per_user):
-        task = generate_task_data()
-        task.update({"Identitas Pengguna": user["Identitas Pengguna"]})
-        task_data.append(task)
-
-# Simpan data pengguna ke dalam file CSV
-with open('user_data.csv', mode='w', newline='') as file:
-    fieldnames_user = ['Identitas Pengguna', 'Mood user', 'Durasi Tidur', 'Kondisi Fisik']
-    writer = csv.DictWriter(file, fieldnames=fieldnames_user)
-
-    writer.writeheader()
-    for user in user_data:
-        writer.writerow(user)
-
-# Simpan data tugas ke dalam file CSV
-with open('task_data.csv', mode='w', newline='') as file:
-    fieldnames_task = ['Identitas Pengguna', 'Jam Mulai',"Jam Selesai", 'Durasi Kerja', 'Durasi Istirahat', 
-                       'Jenis Tugas', 'Tingkat Kesulitan Tugas', 'Interruptions', 
-                       'Deadline', 'Urgency', 'Importance']
-    writer = csv.DictWriter(file, fieldnames=fieldnames_task)
-
-    writer.writeheader()
-    for task in task_data:
-        writer.writerow(task)
+# Menampilkan lima baris pertama dari DataFrame
+df.to_csv('data_dummy.csv', index=False)
