@@ -9,7 +9,7 @@ def generate_user_data():
         "name": fake.name(),
         "gender": random.randint(0, 1),
         "age" : random.randint(20, 39),
-        "job" : random.randint(0, 4),
+        "job" : random.randint(0, 5),
         "task" : random.randint(0, 6),
         "work_days" : random.randint(1, 7),
         "difficulty" : random.randint(1, 5),
