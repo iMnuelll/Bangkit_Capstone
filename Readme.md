@@ -3,7 +3,7 @@
 ## 🗄️ Dataset ##
 
 We get data from Google Form. And our final dataset is ```dataset_akhir_final.csv``` . The data we use for training and testing is divided by 2 with the ratio 80 : 20 .
----
+
 ## ⚙️ Tools ##
 1. Pandas
 2. Numpy
