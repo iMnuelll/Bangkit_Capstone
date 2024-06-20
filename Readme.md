@@ -4,12 +4,11 @@
 We get data from Google Form. And our final dataset is ```dataset_akhir_final.csv``` . The data we use for training and testing is divided by 2 with the ratio 80 : 20
 - - -
 ## ⚙️ Tools ##
-1. Pandas
-2. Numpy
-3. Matplotlib
-4. TensorFlow
-5. sckit-learn
-6. Seaborn
+1. [Pandas](https://pandas.pydata.org/docs/index.html)
+2. [Numpy](https://numpy.org/)
+3. [Matplotlib](https://matplotlib.org/)
+4. [TensorFlow](https://www.tensorflow.org/)
+5. [sckit-learn](https://scikit-learn.org/stable/)
 - - -
 ## 🏢 Model Architecture ##
 1. Hyperparameter Tuning :
