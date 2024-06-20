@@ -37,7 +37,7 @@ Test loss: 0.0000
 Test accuracy: 0.8788
 ```
 - - -
-## Machine Learning Member
+## 🙋 Machine Learning Member
 | Name | Student ID |
 | -----|------------|
 | Leonardo Alfontus Mende Sirait | M119D4KY3013 |
