@@ -35,8 +35,8 @@ We get data from Google Form. And our final dataset is ..... . The data we use f
 ## 📑 Evaluation
 
 After testing on the dataset we got the following accuracy :
-'''sh
+```
 Test loss: 0.0000
 Test accuracy: 0.8788
-'''
+```
 ---
