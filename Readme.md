@@ -37,3 +37,8 @@ Test loss: 0.0000
 Test accuracy: 0.8788
 ```
 - - -
+## Machine Learning Member
+Name | Student ID |
+Leonardo Alfontus Mende Sirait | M119D4KY3013 |
+Rayhan Ahmad Rizalullah | M119D4KY1813 |
+Imanuel Uneputty | M012D4KY3208 |
