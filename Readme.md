@@ -1,9 +1,9 @@
 # PeakTime Machine Learning
 ---
-## 🗄️ Dataset
+## 🗄️ Dataset ##
 We get data from Google Form. And our final dataset is ..... . The data we use for training and testing is divided by 2 with the ratio . : . .
 ---
-## ⚙️ Tools
+## ⚙️ Tools ##
 1. Pandas
 2. Numpy
 3. Matplotlib
@@ -11,7 +11,7 @@ We get data from Google Form. And our final dataset is ..... . The data we use f
 5. sckit-learn
 6. Seaborn
 ---
-## 🏢 Model Architecture
+## 🏢 Model Architecture ##
 1. Hyperparameter Tuning :
    1. Parameter to Tune :
       1. 'max_depth' : [None, 10, 20, 30].
