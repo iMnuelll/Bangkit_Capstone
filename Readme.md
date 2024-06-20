@@ -1,4 +1,4 @@
-# PeakTime Machine Learning
+# PeakTime Machine Learning #
 ---
 ## 🗄️ Dataset ##
 We get data from Google Form. And our final dataset is ..... . The data we use for training and testing is divided by 2 with the ratio . : . .
@@ -30,3 +30,11 @@ We get data from Google Form. And our final dataset is ..... . The data we use f
    1. Initialize the model with the hyperparameters.
    2. Compile the model.
    3. Train the model on ('train_ds').
+---
+## 📑 Evaluation
+After testing on the dataset we got the following accuracy :
+'''
+Test loss: 0.0000
+Test accuracy: 0.8788
+'''
+---
