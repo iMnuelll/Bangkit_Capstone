@@ -1,9 +1,8 @@
 # PeakTime Machine Learning #
----
+- - -
 ## 🗄️ Dataset ##
-
-We get data from Google Form. And our final dataset is ```dataset_akhir_final.csv``` . The data we use for training and testing is divided by 2 with the ratio 80 : 20 .
-
+We get data from Google Form. And our final dataset is ```dataset_akhir_final.csv``` . The data we use for training and testing is divided by 2 with the ratio 80 : 20
+- - -
 ## ⚙️ Tools ##
 1. Pandas
 2. Numpy
@@ -11,7 +10,7 @@ We get data from Google Form. And our final dataset is ```dataset_akhir_final.cs
 4. TensorFlow
 5. sckit-learn
 6. Seaborn
----
+- - -
 ## 🏢 Model Architecture ##
 1. Hyperparameter Tuning :
    1. Parameter to Tune :
@@ -31,7 +30,7 @@ We get data from Google Form. And our final dataset is ```dataset_akhir_final.cs
    1. Initialize the model with the hyperparameters.
    2. Compile the model.
    3. Train the model on ('train_ds').
----
+- - - 
 ## 📑 Evaluation
 
 After testing on the dataset we got the following accuracy :
@@ -39,4 +38,4 @@ After testing on the dataset we got the following accuracy :
 Test loss: 0.0000
 Test accuracy: 0.8788
 ```
----
+- - -
